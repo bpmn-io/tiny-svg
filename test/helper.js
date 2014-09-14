@@ -5,3 +5,8 @@ module.exports.createContainer = function() {
 
   return container;
 };
+
+
+module.exports.normalizeAttr = function(str) {
+  return str.replace(/, /g, ' ');
+};

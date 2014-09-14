@@ -1,7 +1,6 @@
-'use strict';
-
 var create = require('../../lib/create'),
-    append = require('../../lib/manipulation').append;
+    appendTo = require('../../lib/appendTo'),
+    append = require('../../lib/append');
 
 var helper = require('../helper');
 
@@ -24,10 +23,27 @@ describe('create', function() {
     var container = helper.createContainer();
 
     // when
-    var svg = append(create('svg', { viewBox: '100 100 200 200', width: '200px', height: '200px' }), container);
+    var svg = appendTo(create('svg', { viewBox: '100 100 200 200', width: 200, height: 200 }), container);
 
     // then
     expect(svg).to.exist;
+  });
+
+
+  it('should create element from SVG markup', function() {
+
+    // given
+    var container = helper.createContainer();
+
+    // when
+    var svg = create('<svg><g><circle cx="10" cy="10" r="2"></circle></g></svg>');
+
+    append(container, svg);
+
+    // then
+    expect(svg.nodeName).to.eql('svg');
+    expect(svg.childNodes.length).to.eql(1);
+    expect(svg.childNodes[0].nodeName).to.eql('g');
   });
 
 });

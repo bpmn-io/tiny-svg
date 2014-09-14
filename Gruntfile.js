@@ -13,6 +13,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    env: { },
+
     config: {
       sources: 'lib',
       tests: 'test',
@@ -57,20 +59,33 @@ module.exports = function(grunt) {
     },
 
     browserify: {
-      options: {
-        browserifyOptions: {
-          builtins: false,
-          detectGlobals: false,
-          insertGlobalVars: [],
-          debug: true
+      development: {
+        options: {
+          browserifyOptions: {
+            builtins: false,
+            detectGlobals: false,
+            insertGlobalVars: [],
+            debug: true,
+            standalone: 'tsvg'
+          }
         },
-
-        plugin: [ require('bundle-collapser/plugin') ]
+        files: {
+          '<%= config.dist %>/<%= pkg.name %>.js': 'index.js'
+        }
       },
 
-      lib: {
+      min: {
+        options: {
+          browserifyOptions: {
+            builtins: false,
+            detectGlobals: false,
+            insertGlobalVars: [],
+            standalone: 'tsvg'
+          },
+          plugin: [ require('bundle-collapser/plugin') ]
+        },
         files: {
-          '<%= config.dist %>/tsvg.js': [ '<%= config.sources %>/*.js' ],
+          '<%= config.dist %>/<%= pkg.name %>.prod.js': 'index.js'
         }
       }
     },
@@ -78,21 +93,47 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                '<%= grunt.template.today("yyyy-mm-dd") %> */',
+                '<%= grunt.template.today("yyyy-mm-dd") %> */\n',
       },
-      lib: {
+
+      development: {
         files: {
-          '<%= config.dist %>/tsvg.min.js': [ '<%= config.dist %>/tsvg.js' ]
+          '<%= config.dist %>/<%= pkg.name %>.min.js': '<%= config.dist %>/<%= pkg.name %>.js'
         }
+      },
+
+      min: {
+        files: {
+          '<%= config.dist %>/<%= pkg.name %>.prod.min.js': '<%= config.dist %>/<%= pkg.name %>.prod.js'
+        }
+      },
+
+      inlined: {
+        files: {
+          '<%= config.dist %>/<%= pkg.name %>.inlined.min.js': '<%= config.dist %>/<%= pkg.name %>.inlined.js'
+        }
+      }
+    },
+
+    compress: {
+      dist: {
+        options: {
+          mode: 'gzip'
+        },
+        files: [ {
+          expand: true,
+          cwd: 'dist/',
+          src: ['*.js'],
+          dest: 'dist/compressed/'
+        } ]
       }
     },
 
     jsdoc: {
       dist: {
-        src: [ '<%= config.sources %>/**/*.js' ],
+        src: [ '<%= config.sources %>/**/*.js', 'index.js' ],
         options: {
-          destination: 'docs/api',
-          plugins: [ 'plugins/markdown' ]
+          destination: 'docs/api'
         }
       }
     }
@@ -104,5 +145,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('auto-test', [ 'karma:unit' ]);
 
-  grunt.registerTask('default', [ 'jshint', 'test', 'browserify', 'uglify', 'jsdoc' ]);
+  grunt.registerTask('default', [ 'jshint', 'test', 'browserify', 'uglify', 'compress', 'jsdoc' ]);
 };
