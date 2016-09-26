@@ -17,6 +17,7 @@ module.exports = {
   replace: require('./lib/replace'),
   append: require('./lib/append'),
   appendTo: require('./lib/appendTo'),
+  clone: require('./lib/clone'),
 
   // innerHTMl pendant
   innerSVG: require('./lib/innerSVG'),
