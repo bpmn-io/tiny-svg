@@ -1,4 +1,4 @@
-var parse = require('../../../lib/parse'),
+var parse = require('../../../lib/util/parse'),
     innerSVG = require('../../../lib/innerSVG');
 
 
