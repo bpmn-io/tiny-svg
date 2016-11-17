@@ -123,10 +123,6 @@ describe('inner-svg', function() {
         markerEnd: 'url("#sequenceflow-end")'
       });
 
-      var text =
-        '<path d="m 272,202L340,202" ' +
-              'style="marker-end: url(\'#sequenceflow-end\'); "/>';
-
       // when
       var svg = innerSVG(element);
 

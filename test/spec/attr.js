@@ -84,7 +84,7 @@ describe('attr', function() {
 
     // then
     // Chrome, Firefox export url enclosed in <"">
-    expect(attr(rect, 'marker-end')).to.match(/url\((#bar|"#bar")\)/)
+    expect(attr(rect, 'marker-end')).to.match(/url\((#bar|"#bar")\)/);
   });
 
 

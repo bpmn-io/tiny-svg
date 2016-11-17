@@ -29,11 +29,19 @@ module.exports = function(grunt) {
       }
     },
 
-    jshint: {
-      src: ['<%= config.sources %>'],
-
-      options: {
-        jshintrc: true
+    eslint: {
+      check: {
+        src: [
+          '{lib,test}/**/*.js'
+        ]
+      },
+      fix: {
+        src: [
+          '{lib,test}/**/*.js'
+        ],
+        options: {
+          fix: true
+        }
       }
     },
 
@@ -127,15 +135,6 @@ module.exports = function(grunt) {
           dest: 'dist/compressed/'
         } ]
       }
-    },
-
-    jsdoc: {
-      dist: {
-        src: [ '<%= config.sources %>/**/*.js', 'index.js' ],
-        options: {
-          destination: 'docs/api'
-        }
-      }
     }
   });
 
@@ -145,5 +144,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask('auto-test', [ 'karma:unit' ]);
 
-  grunt.registerTask('default', [ 'jshint', 'test', 'browserify', 'uglify', 'compress', 'jsdoc' ]);
+  grunt.registerTask('default', [
+    'eslint:check',
+    'test',
+    'browserify',
+    'uglify',
+    'compress'
+  ]);
 };
