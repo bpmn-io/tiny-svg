@@ -10,4 +10,4 @@ before_script:
   - sleep 3
 
 script:
-  - npm run all
+  - TEST_BROWSERS=Firefox,PhantomJS npm run all
