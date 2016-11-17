@@ -1,5 +1,7 @@
 # tiny-svg
 
+[![Build Status](https://travis-ci.org/bpmn-io/tiny-svg.svg?branch=master)](https://travis-ci.org/bpmn-io/tiny-svg)
+
 __tiny-svg__ is a minimal toolbelt for creating clean SVG applications.
 
 
