@@ -60,6 +60,34 @@ describe('attr', function() {
   });
 
 
+  it('should set marker-start attribute', function() {
+
+    // given
+    var rect = create('rect');
+
+    // when
+    attr(rect, 'marker-start', 'url("#foo")');
+
+    // then
+    // Chrome, Firefox export url enclosed in <"">
+    expect(attr(rect, 'marker-start')).to.match(/url\((#foo|"#foo")\)/);
+  });
+
+
+  it('should set markerEnd attribute', function() {
+
+    // given
+    var rect = create('rect');
+
+    // when
+    attr(rect, 'markerEnd', 'url(#bar)');
+
+    // then
+    // Chrome, Firefox export url enclosed in <"">
+    expect(attr(rect, 'marker-end')).to.match(/url\((#bar|"#bar")\)/)
+  });
+
+
   it('should set attribute', function() {
 
     // given

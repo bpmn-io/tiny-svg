@@ -1,6 +1,7 @@
 var create = require('../../lib/create'),
     appendTo = require('../../lib/appendTo'),
-    innerSVG = require('../../lib/innerSVG');
+    innerSVG = require('../../lib/innerSVG'),
+    attr = require('../../lib/attr');
 
 var helper = require('../helper');
 
@@ -45,6 +46,25 @@ describe('inner-svg', function() {
       expect(element.childNodes.length).to.eql(1);
     });
 
+
+    it('should set url style', function() {
+
+      // given
+      var container = helper.createContainer();
+      var element = appendTo(create('svg'), container);
+
+      var text = '<g style="marker-start: url(\'#foo\')"></g>';
+
+      // when
+      innerSVG(element, text);
+
+      var groupNode = element.childNodes[0];
+
+      // then
+      // Chrome, Firefox export url enclosed in <"">
+      expect(groupNode.style['marker-start']).to.match(/url\((#foo|"#foo")\)/);
+    });
+
   });
 
 
@@ -86,6 +106,35 @@ describe('inner-svg', function() {
 
       // then
       expect(svg).to.eql(text);
+    });
+
+
+    it('should get url style', function() {
+
+      // given
+      var container = helper.createContainer();
+      var element = appendTo(create('svg'), container);
+
+      var group = appendTo(create('g'), element);
+      var path = appendTo(create('path'), group);
+
+      attr(path, {
+        d: 'm 272,202L340,202',
+        markerEnd: 'url("#sequenceflow-end")'
+      });
+
+      var text =
+        '<path d="m 272,202L340,202" ' +
+              'style="marker-end: url(\'#sequenceflow-end\'); "/>';
+
+      // when
+      var svg = innerSVG(element);
+
+      // then
+      // Chrome, Firefox export url enclosed in <"">,
+      // we need to properly escape <"> with <'> to produce
+      // valid SVG
+      expect(svg).to.match(/.*url\(('#sequenceflow-end'|#sequenceflow-end)\).*/);
     });
 
 
