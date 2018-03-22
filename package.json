@@ -4,10 +4,10 @@
   "description": "A minimal toolbelt for builing fast SVG-based applications",
   "main": "index.js",
   "scripts": {
-    "all": "grunt",
-    "dev": "grunt auto-test",
+    "all": "run-s lint test",
+    "dev": "npm test -- --auto-watch --no-single-run",
     "lint": "eslint .",
-    "test": "grunt test"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "browserify": "^16.1.1",
     "bundle-collapser": "^1.2.1",
     "chai": "^1.9.1",
     "eslint": "^4.19.1",
@@ -36,17 +37,17 @@
     "grunt-eslint": "^19.0.0",
     "grunt-karma": "^2.0.0",
     "grunt-release": "^0.7.0",
-    "karma": "^0.13.0",
-    "karma-browserify": "^5.1.0",
+    "karma": "^1.7.1",
+    "karma-browserify": "^5.2.0",
     "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^0.1.2",
-    "karma-firefox-launcher": "^0.1.3",
-    "karma-ie-launcher": "^0.1.4",
-    "karma-mocha": "^0.1.7",
-    "karma-phantomjs-launcher": "0.1.2",
-    "karma-sauce-launcher": "^0.2.10",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
     "load-grunt-tasks": "^0.3.0",
     "mocha": "^1.21.4",
-    "time-grunt": "^0.3.0"
+    "time-grunt": "^0.3.0",
+    "watchify": "^3.11.0"
   }
 }

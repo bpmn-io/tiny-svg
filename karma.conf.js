@@ -1,8 +1,6 @@
 module.exports = function(karma) {
   karma.set({
 
-    basePath: '../../',
-
     frameworks: [ 'browserify', 'mocha', 'chai' ],
 
     files: [
@@ -17,8 +15,8 @@ module.exports = function(karma) {
 
     browsers: [ 'PhantomJS' ],
 
-    singleRun: false,
-    autoWatch: true,
+    singleRun: true,
+    autoWatch: false,
 
     // browserify configuration
     browserify: {
