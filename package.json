@@ -11,19 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nikku/tiny-svg"
+    "url": "https://github.com/bpmn-io/tiny-svg"
   },
   "keywords": [
     "svg",
     "library",
     "geometry"
   ],
-  "author": "Nico Rehwaldt <git_nikku@nixis.de>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Nikku/tiny-svg/issues"
+  "author": {
+    "name": "Nico Rehwaldt",
+    "url": "https://github.com/nikku"
   },
-  "homepage": "https://github.com/Nikku/tiny-svg",
+  "license": "MIT",
   "devDependencies": {
     "bundle-collapser": "^1.2.1",
     "chai": "^1.9.1",
