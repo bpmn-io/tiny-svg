@@ -1,7 +1,11 @@
-var create = require('../../lib/create'),
-    append = require('../../lib/append');
+import {
+  create,
+  append
+} from '../../lib';
 
-var helper = require('../helper');
+import {
+  createContainer
+} from '../helper';
 
 
 describe('append', function() {
@@ -9,7 +13,7 @@ describe('append', function() {
   it('should append + return parent', function() {
 
     // given
-    var container = helper.createContainer(),
+    var container = createContainer(),
         svg = create('svg');
 
     // when

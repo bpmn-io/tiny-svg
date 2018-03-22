@@ -1,6 +1,8 @@
-var parse = require('../../../lib/util/parse'),
-    innerSVG = require('../../../lib/innerSVG');
+import {
+  innerSVG
+} from '../../../lib';
 
+import parse from '../../../lib/util/parse';
 
 describe('parse', function() {
 

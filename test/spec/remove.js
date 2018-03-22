@@ -1,8 +1,12 @@
-var create = require('../../lib/create'),
-    appendTo = require('../../lib/appendTo'),
-    remove = require('../../lib/remove');
+import {
+  create,
+  appendTo,
+  remove
+} from '../../lib';
 
-var helper = require('../helper');
+import {
+  createContainer
+} from '../helper';
 
 
 describe('remove', function() {
@@ -10,7 +14,7 @@ describe('remove', function() {
   it('should remove + return parent', function() {
 
     // given
-    var container = helper.createContainer(),
+    var container = createContainer(),
         svg = create('<svg><rect x="100" y="100" width="20" height="20"></rect></svg>');
 
     // when

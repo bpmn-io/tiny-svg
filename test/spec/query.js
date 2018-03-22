@@ -1,6 +1,8 @@
-var create = require('../../lib/create'),
-    select = require('../../lib/query').select,
-    selectAll = require('../../lib/query').selectAll;
+import {
+  create,
+  selectAll,
+  select
+} from '../../lib';
 
 
 describe('query', function() {

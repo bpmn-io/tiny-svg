@@ -1,10 +1,14 @@
-var create = require('../../lib/create'),
-    geometry = require('../../lib/geometry'),
-    attr = require('../../lib/attr'),
-    transform = require('../../lib/transform');
+import {
+  create,
+  createMatrix,
+  createTransform,
+  attr,
+  transform
+} from '../../lib';
 
-
-var normalizeAttr = require('../helper').normalizeAttr;
+import {
+  normalizeAttr
+} from '../helper';
 
 
 describe('transform', function() {
@@ -12,11 +16,11 @@ describe('transform', function() {
   it('should create and set transform', function() {
 
     // given
-    var matrix = geometry.createMatrix({ e: 100, f: 100 }),
+    var matrix = createMatrix({ e: 100, f: 100 }),
         g = create('g');
 
     // when
-    var t = geometry.createTransform(matrix);
+    var t = createTransform(matrix);
 
     transform(g, t);
 
@@ -28,7 +32,7 @@ describe('transform', function() {
   it('should create and set transform form matrix', function() {
 
     // given
-    var matrix = geometry.createMatrix({ e: 100, f: 100 }),
+    var matrix = createMatrix({ e: 100, f: 100 }),
         g = create('g');
 
     // when
@@ -44,9 +48,9 @@ describe('transform', function() {
     // given
     var g = create('g');
 
-    var m1 = geometry.createMatrix({ e: -50, f: -80 }),
-        m2 = geometry.createMatrix({ e: 100, f: 100 }),
-        t = geometry.createTransform();
+    var m1 = createMatrix({ e: -50, f: -80 }),
+        m2 = createMatrix({ e: 100, f: 100 }),
+        t = createTransform();
 
     t.setTranslate(100, 100);
 

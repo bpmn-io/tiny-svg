@@ -1,8 +1,12 @@
-var create = require('../../lib/create'),
-    appendTo = require('../../lib/appendTo'),
-    append = require('../../lib/append');
+import {
+  create,
+  appendTo,
+  append
+} from '../../lib';
 
-var helper = require('../helper');
+import {
+  createContainer
+} from '../helper';
 
 
 describe('create', function() {
@@ -20,7 +24,7 @@ describe('create', function() {
   it('should create + append SVGElement', function() {
 
     // given
-    var container = helper.createContainer();
+    var container = createContainer();
 
     // when
     var svg = appendTo(create('svg', { viewBox: '100 100 200 200', width: 200, height: 200 }), container);
@@ -33,7 +37,7 @@ describe('create', function() {
   it('should create element from SVG markup', function() {
 
     // given
-    var container = helper.createContainer();
+    var container = createContainer();
 
     // when
     var svg = create('<svg><g><circle cx="10" cy="10" r="2"></circle></g></svg>');

@@ -1,9 +1,13 @@
-var create = require('../../lib/create'),
-    classes = require('../../lib/classes');
+import {
+  create,
+  classes
+} from '../../lib';
+
 
 function classList(el) {
   return el.className.baseVal.split(' ');
 }
+
 
 describe('classes', function() {
 
@@ -20,6 +24,7 @@ describe('classes', function() {
 
   });
 
+
   it('should remove a class', function() {
 
     // given
@@ -33,6 +38,7 @@ describe('classes', function() {
     expect(classList(rect)).not.to.contain('foo');
 
   });
+
 
   it('should toggle a class', function() {
 
@@ -53,6 +59,7 @@ describe('classes', function() {
 
   });
 
+
   it('should check for class \'has\'', function() {
 
     // given
@@ -69,6 +76,7 @@ describe('classes', function() {
     expect(classes(rect).has('foo')).not.to.be.true;
 
   });
+
 
   it('should check for class \'contains\'', function() {
 

@@ -1,9 +1,13 @@
-var create = require('../../lib/create'),
-    appendTo = require('../../lib/appendTo'),
-    innerSVG = require('../../lib/innerSVG'),
-    attr = require('../../lib/attr');
+import {
+  create,
+  appendTo,
+  innerSVG,
+  attr
+} from '../../lib';
 
-var helper = require('../helper');
+import {
+  createContainer
+} from '../helper';
 
 
 describe('inner-svg', function() {
@@ -13,7 +17,7 @@ describe('inner-svg', function() {
     it('should set simple', function() {
 
       // given
-      var container = helper.createContainer();
+      var container = createContainer();
       var element = appendTo(create('svg'), container);
 
       var text = '<g class="foo bar"><rect x="0" y="0" width="0" height="0" rx="50" ry="50"/></g>';
@@ -29,7 +33,7 @@ describe('inner-svg', function() {
     it('should set CDATA', function() {
 
       // given
-      var container = helper.createContainer();
+      var container = createContainer();
       var element = appendTo(create('svg'), container);
 
       var text =
@@ -50,7 +54,7 @@ describe('inner-svg', function() {
     it('should set url style', function() {
 
       // given
-      var container = helper.createContainer();
+      var container = createContainer();
       var element = appendTo(create('svg'), container);
 
       var text = '<g style="marker-start: url(\'#foo\')"></g>';
@@ -73,7 +77,7 @@ describe('inner-svg', function() {
     it('should get simple', function() {
 
       // given
-      var container = helper.createContainer();
+      var container = createContainer();
       var element = appendTo(create('svg'), container);
 
       var text = '<g class="foo bar"><rect x="0" y="0" width="0" height="0" rx="50" ry="50"/></g>';
@@ -91,7 +95,7 @@ describe('inner-svg', function() {
     it('should get CDATA', function() {
 
       // given
-      var container = helper.createContainer();
+      var container = createContainer();
       var element = appendTo(create('svg'), container);
 
       var text =
@@ -112,7 +116,7 @@ describe('inner-svg', function() {
     it('should get url style', function() {
 
       // given
-      var container = helper.createContainer();
+      var container = createContainer();
       var element = appendTo(create('svg'), container);
 
       var group = appendTo(create('g'), element);
@@ -137,7 +141,7 @@ describe('inner-svg', function() {
     it('should get CDATA <style>', function() {
 
       // given
-      var container = helper.createContainer();
+      var container = createContainer();
       var element = appendTo(create('svg'), container);
 
       var text =

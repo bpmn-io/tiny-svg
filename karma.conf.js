@@ -20,7 +20,10 @@ module.exports = function(karma) {
 
     // browserify configuration
     browserify: {
-      debug: true
+      debug: true,
+      transform: [
+        'babelify'
+      ]
     }
   });
 };

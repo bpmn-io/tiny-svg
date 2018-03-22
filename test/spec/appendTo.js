@@ -1,7 +1,11 @@
-var create = require('../../lib/create'),
-    appendTo = require('../../lib/appendTo');
+import {
+  create,
+  appendTo
+} from '../../lib';
 
-var helper = require('../helper');
+import {
+  createContainer
+} from '../helper';
 
 
 describe('appendTo', function() {
@@ -9,7 +13,7 @@ describe('appendTo', function() {
   it('should append + return node', function() {
 
     // given
-    var container = helper.createContainer();
+    var container = createContainer();
 
     // when
     var result = appendTo(create('svg'), container);

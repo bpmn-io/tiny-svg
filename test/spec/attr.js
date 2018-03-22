@@ -1,9 +1,12 @@
-var create = require('../../lib/create'),
-    query = require('../../lib/query'),
-    attr = require('../../lib/attr');
+import {
+  create,
+  select,
+  attr
+} from '../../lib';
 
-
-var normalizeAttr = require('../helper').normalizeAttr;
+import {
+  normalizeAttr
+} from '../helper';
 
 
 describe('attr', function() {
@@ -105,7 +108,7 @@ describe('attr', function() {
 
     // given
     var svg = create('<svg><g transform="translate(100 100)"></g></svg>'),
-        g = query.select(svg, 'g');
+        g = select(svg, 'g');
 
     // when
     var transform = attr(g, 'transform');

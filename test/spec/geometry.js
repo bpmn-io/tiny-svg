@@ -1,4 +1,8 @@
-var geometry = require('../../lib/geometry');
+import {
+  createMatrix,
+  createPoint,
+  createTransform
+} from '../../lib';
 
 
 describe('geometry', function() {
@@ -8,7 +12,7 @@ describe('geometry', function() {
     it('should create point', function() {
 
       // when
-      var p = geometry.createPoint();
+      var p = createPoint();
 
       // then
       expect(p instanceof SVGPoint).to.be.true;
@@ -21,7 +25,7 @@ describe('geometry', function() {
     it('should create point from (x, y)', function() {
 
       // when
-      var p = geometry.createPoint(10, 20);
+      var p = createPoint(10, 20);
 
       // then
       expect(p.x).to.eql(10);
@@ -32,7 +36,7 @@ describe('geometry', function() {
     it('should create point from Object{x, y}', function() {
 
       // when
-      var p = geometry.createPoint({ x: 10, y: 20 });
+      var p = createPoint({ x: 10, y: 20 });
 
       // then
       expect(p.x).to.eql(10);
@@ -47,13 +51,24 @@ describe('geometry', function() {
     it('should create matrix', function() {
 
       // when
-      var m = geometry.createMatrix({ e: 10, f: 20 });
+      var m = createMatrix({ e: 10, f: 20 });
 
       // then
       expect(m instanceof SVGMatrix).to.be.true;
 
       expect(m.e).to.eql(10);
       expect(m.f).to.eql(20);
+    });
+
+  });
+
+
+  describe('createTransform', function() {
+
+    it('should create transform', function() {
+
+      // then
+      expect(createTransform).to.exist;
     });
 
   });
