@@ -25,18 +25,9 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^16.1.1",
-    "bundle-collapser": "^1.2.1",
     "chai": "^1.9.1",
     "eslint": "^4.19.1",
     "eslint-plugin-bpmn-io": "^0.5.2",
-    "grunt": "^0.4.5",
-    "grunt-browserify": "^3.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-compress": "^0.11.0",
-    "grunt-contrib-uglify": "^0.5.1",
-    "grunt-eslint": "^19.0.0",
-    "grunt-karma": "^2.0.0",
-    "grunt-release": "^0.7.0",
     "karma": "^1.7.1",
     "karma-browserify": "^5.2.0",
     "karma-chai": "^0.1.0",
@@ -45,9 +36,8 @@
     "karma-ie-launcher": "^1.0.0",
     "karma-mocha": "^1.3.0",
     "karma-phantomjs-launcher": "^1.0.4",
-    "load-grunt-tasks": "^0.3.0",
     "mocha": "^1.21.4",
-    "time-grunt": "^0.3.0",
+    "npm-run-all": "^4.1.2",
     "watchify": "^3.11.0"
   }
 }
