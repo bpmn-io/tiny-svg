@@ -1,6 +1,6 @@
 var create = require('../../lib/create'),
     geometry = require('../../lib/geometry'),
-    attr  = require('../../lib/attr'),
+    attr = require('../../lib/attr'),
     transform = require('../../lib/transform');
 
 

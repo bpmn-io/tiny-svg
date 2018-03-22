@@ -6,6 +6,7 @@
   "scripts": {
     "all": "grunt",
     "dev": "grunt auto-test",
+    "lint": "eslint .",
     "test": "grunt test"
   },
   "repository": {
@@ -26,8 +27,8 @@
   "devDependencies": {
     "bundle-collapser": "^1.2.1",
     "chai": "^1.9.1",
-    "eslint": "^3.10.2",
-    "eslint-plugin-mocha": "^4.7.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-bpmn-io": "^0.5.2",
     "grunt": "^0.4.5",
     "grunt-browserify": "^3.0.1",
     "grunt-cli": "^1.2.0",
