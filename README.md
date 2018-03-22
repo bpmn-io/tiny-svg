@@ -14,7 +14,7 @@ __tiny-svg__ is a minimal toolbelt for creating clean SVG applications.
 * simplified attribute handling
 * geometry helpers
 
-Cf. [available utilities](./lib);
+Checkout [provided utilities](./lib).
 
 
 ## Usage
