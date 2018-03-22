@@ -6,4 +6,4 @@ addons:
   firefox: "latest-esr"
 
 script:
-  - TEST_BROWSERS=Firefox,PhantomJS xvfb-run npm run all
+  - TEST_BROWSERS=ChromeHeadless,Firefox,PhantomJS xvfb-run npm run all

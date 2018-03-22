@@ -2,7 +2,7 @@
 // any of [ 'ChromeHeadless', 'Chrome', 'Firefox', 'IE', 'PhantomJS' ]
 var browsers =
   (process.env.TEST_BROWSERS || 'PhantomJS')
-    .replace(/^\s+|\s+$/, '')
+    .replace(/^\s+|\s+$/g, '')
     .split(/\s*,\s*/g)
     .map(function(browser) {
       if (browser === 'ChromeHeadless') {
@@ -17,10 +17,15 @@ var browsers =
       }
     });
 
+
 module.exports = function(karma) {
   karma.set({
 
-    frameworks: [ 'browserify', 'mocha', 'chai' ],
+    frameworks: [
+      'browserify',
+      'mocha',
+      'chai'
+    ],
 
     files: [
       'test/spec/**/*.js'
@@ -32,7 +37,18 @@ module.exports = function(karma) {
 
     reporters: [ 'progress' ],
 
-    browsers: [ browsers ],
+    customLaunchers: {
+      ChromeHeadless_Linux: {
+        base: 'ChromeHeadless',
+        flags: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox'
+        ],
+        debug: true
+      }
+    },
+
+    browsers: browsers,
 
     singleRun: true,
     autoWatch: false,
