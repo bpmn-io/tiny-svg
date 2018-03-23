@@ -48,6 +48,12 @@ innerSVG(g, text);
 Your favourite module bundler should apply tree-shaking to only include the components your application requires. If you're using CommonJS modules give [common-shake](https://github.com/indutny/common-shake) a try.
 
 
+## Related
+
+* [min-dom](https://github.com/bpmn-io/min-dom) - minimal DOM utility toolbelt
+* [min-dash](https://github.com/bpmn-io/min-dash) - minimal lodash inspired utility toolbelt
+
+
 ## License
 
 MIT
