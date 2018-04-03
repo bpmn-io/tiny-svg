@@ -6,6 +6,10 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.0.0
+
+* `FIX`: drop `browser` field for better interoperability with module bundlers
+
 ## 1.1.0
 
 * `CHORE`: mark utils as side-effect free via `sideEffects: false`
