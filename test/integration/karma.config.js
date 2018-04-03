@@ -1,5 +1,3 @@
-var pkg = require('../../package');
-
 module.exports = function(karma) {
   karma.set({
 
@@ -8,7 +6,7 @@ module.exports = function(karma) {
     frameworks: [ 'mocha', 'chai' ],
 
     files: [
-      pkg.browser,
+      'dist/tiny-svg.js',
       'test/integration/**/*.js'
     ],
 

@@ -4,7 +4,6 @@
   "description": "A minimal toolbelt for builing fast SVG-based applications",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "browser": "dist/tiny-svg.js",
   "scripts": {
     "all": "run-s lint test bundle test:integration",
     "bundle": "rollup -c",

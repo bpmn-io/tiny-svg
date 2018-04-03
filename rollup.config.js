@@ -2,13 +2,15 @@ import uglify from 'rollup-plugin-uglify';
 
 import pkg from './package.json';
 
+const umdDist = 'dist/tiny-svg.js';
+
 export default [
   // browser-friendly UMD build
   {
     input: 'lib/index.js',
     output: {
       name: 'TinySVG',
-      file: pkg.browser,
+      file: umdDist,
       format: 'umd'
     }
   },
@@ -16,7 +18,7 @@ export default [
     input: 'lib/index.js',
     output: {
       name: 'TinySVG',
-      file: pkg.browser.replace(/\.js$/, '.min.js'),
+      file: umdDist.replace(/\.js$/, '.min.js'),
       format: 'umd'
     },
     plugins: [
