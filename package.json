@@ -4,6 +4,7 @@
   "description": "A minimal toolbelt for builing fast SVG-based applications",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "all": "run-s lint test bundle test:integration",
     "bundle": "rollup -c",
@@ -49,6 +50,7 @@
     "puppeteer": "^1.2.0",
     "rollup": "^0.57.1",
     "rollup-plugin-uglify": "^3.0.0",
+    "rollup-plugin-copy": "^0.2.3",
     "watchify": "^3.11.0"
   }
 }
