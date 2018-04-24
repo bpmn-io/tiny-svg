@@ -53,6 +53,7 @@
     "puppeteer": "^1.2.0",
     "rollup": "^0.57.1",
     "rollup-plugin-uglify": "^3.0.0",
+    "rollup-plugin-copy": "^0.2.3",
     "watchify": "^3.11.0"
   }
 }

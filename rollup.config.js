@@ -1,4 +1,5 @@
 import uglify from 'rollup-plugin-uglify';
+import copy from 'rollup-plugin-copy';
 
 import pkg from './package.json';
 
@@ -22,7 +23,8 @@ export default [
       format: 'umd'
     },
     plugins: [
-      uglify()
+      uglify(),
+      copy({ 'lib/index.d.ts': pkg.types })
     ]
   },
   {
