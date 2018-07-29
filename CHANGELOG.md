@@ -6,6 +6,10 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.1.2
+
+* `FIX`: correct `{}` TypeScript definition
+
 ## 2.1.1
 
 * `FIX`: correct TypeScript definitions
