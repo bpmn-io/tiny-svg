@@ -18,8 +18,8 @@ export function append(element: Element, node: SVGElement): typeof element;
  */
 export function appendTo(element: Element, target: SVGElement): typeof element;
 
-export interface KeyValue<TKey = string, TValue = any> {
-  [key: TKey]: TValue;
+export interface KeyValue {
+  [key: string]: any;
 }
 
 export function attr(node: SVGElement, name: string): string;
