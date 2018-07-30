@@ -20,12 +20,12 @@ Checkout [provided utilities](./lib).
 ## Usage
 
 ```javascript
-const {
+import {
   appendTo,
   classes,
   create,
   innerSVG
-} = require('tiny-svg');
+} from 'tiny-svg';
 
 var container = document.createElement('div');
 var element = appendTo(create('svg'), container);
