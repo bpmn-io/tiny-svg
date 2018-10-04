@@ -69,6 +69,44 @@ describe('inner-svg', function() {
       expect(groupNode.style['marker-start']).to.match(/url\((#foo|"#foo")\)/);
     });
 
+
+    it('should set from SVG', function() {
+
+      // given
+      var container = createContainer();
+      var element = appendTo(create('svg'), container);
+
+      var text =
+        '<svg>' +
+          '<g id="G"/>' +
+          '<g id="G2"/>' +
+        '</svg>';
+
+      // when
+      innerSVG(element, text);
+
+      // then
+      expect(element.childNodes.length).to.eql(2);
+    });
+
+
+    it('should set fragment', function() {
+
+      // given
+      var container = createContainer();
+      var element = appendTo(create('svg'), container);
+
+      var text =
+        '<g id="G"/>' +
+        '<g id="G2"/>';
+
+      // when
+      innerSVG(element, text);
+
+      // then
+      expect(element.childNodes.length).to.eql(2);
+    });
+
   });
 
 
@@ -150,6 +188,26 @@ describe('inner-svg', function() {
             '.foo { stroke: #ffffff; }' +
           ']]></style>' +
         '</defs>';
+
+      innerSVG(element, text);
+
+      // when
+      var svg = innerSVG(element);
+
+      // then
+      expect(svg).to.eql(text);
+    });
+
+
+    it('should get fragment', function() {
+
+      // given
+      var container = createContainer();
+      var element = appendTo(create('svg'), container);
+
+      var text =
+        '<g id="G"/>' +
+        '<g id="G2"/>';
 
       innerSVG(element, text);
 
