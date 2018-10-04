@@ -6,6 +6,12 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.2.0
+
+* `FEAT`: add ability to `create` any SVG element via markup
+* `FEAT`: add ability to set `innerSVG` to fragment
+* `FEAT`: add `prependTo` and `prepend` utils
+
 ## 2.1.2
 
 * `FIX`: correct `{}` TypeScript definition
