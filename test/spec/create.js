@@ -34,7 +34,7 @@ describe('create', function() {
   });
 
 
-  it('should create element from SVG markup', function() {
+  it('should create <svg> from markup', function() {
 
     // given
     var container = createContainer();
@@ -48,6 +48,24 @@ describe('create', function() {
     expect(svg.nodeName).to.eql('svg');
     expect(svg.childNodes.length).to.eql(1);
     expect(svg.childNodes[0].nodeName).to.eql('g');
+  });
+
+
+  it('should create <g> from markup', function() {
+
+    // given
+    var container = createContainer();
+
+    // when
+    var g = create('<g id="G"><circle cx="10" cy="10" r="2"></circle></g>');
+
+    append(container, g);
+
+    // then
+    expect(g.nodeName).to.eql('g');
+    expect(g.id).to.eql('G');
+    expect(g.childNodes.length).to.eql(1);
+    expect(g.childNodes[0].nodeName).to.eql('circle');
   });
 
 });
