@@ -14,13 +14,13 @@ describe('appendTo', function() {
 
     // given
     var container = createContainer();
+    var svg = create('svg');
 
     // when
-    var result = appendTo(create('svg'), container);
+    var result = appendTo(svg, container);
 
     // then
-    expect(result).to.exist;
-    expect(result.nodeName).to.eql('svg');
+    expect(result).to.equal(svg);
 
     expect(result.parentNode).to.eql(container);
   });

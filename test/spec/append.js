@@ -20,8 +20,7 @@ describe('append', function() {
     var result = append(container, svg);
 
     // then
-    expect(result).to.exist;
-    expect(result.nodeName.toLowerCase()).to.eql('div');
+    expect(result).to.equal(container);
 
     expect(svg.parentNode).to.eql(result);
   });
