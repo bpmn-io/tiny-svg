@@ -1,6 +1,6 @@
 import {
   create,
-  createMatrix,
+  createMatrix as matrix,
   createTransform,
   attr,
   transform
@@ -13,16 +13,26 @@ import {
 
 describe('transform', function() {
 
-  it('should create and set transform', function() {
+  it('should apply matrix', function() {
 
     // given
-    var matrix = createMatrix({ e: 100, f: 100 }),
-        g = create('g');
+    var g = create('g');
 
     // when
-    var t = createTransform(matrix);
+    transform(g, matrix({ e: 100, f: 100 }));
 
-    transform(g, t);
+    // then
+    expect(normalizeAttr(attr(g, 'transform'))).to.eql('matrix(1 0 0 1 100 100)');
+  });
+
+
+  it('should apply translate', function() {
+
+    // given
+    var g = create('g');
+
+    // when
+    transform(g, translate(100, 100));
 
     // then
     expect(normalizeAttr(attr(g, 'transform'))).to.eql('matrix(1 0 0 1 100 100)');
@@ -32,11 +42,10 @@ describe('transform', function() {
   it('should create and set transform form matrix', function() {
 
     // given
-    var matrix = createMatrix({ e: 100, f: 100 }),
-        g = create('g');
+    var g = create('g');
 
     // when
-    transform(g, matrix);
+    transform(g, matrix({ e: 100, f: 100 }));
 
     // then
     expect(normalizeAttr(attr(g, 'transform'))).to.eql('matrix(1 0 0 1 100 100)');
@@ -48,17 +57,26 @@ describe('transform', function() {
     // given
     var g = create('g');
 
-    var m1 = createMatrix({ e: -50, f: -80 }),
-        m2 = createMatrix({ e: 100, f: 100 }),
-        t = createTransform();
-
-    t.setTranslate(100, 100);
-
     // when
-    transform(g, [ m1, m2, t ]);
+    transform(g, [
+      matrix({ e: -50, f: -80 }),
+      matrix({ e: 100, f: 100 }),
+      translate(100, 100)
+    ]);
 
     // then
     expect(normalizeAttr(attr(g, 'transform'))).to.eql('matrix(1 0 0 1 150 120)');
   });
 
 });
+
+
+// helpers //////////////////
+
+function translate(x, y) {
+  var t = createTransform();
+
+  t.setTranslate(x, y);
+
+  return t;
+}
