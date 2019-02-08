@@ -48,7 +48,7 @@ describe('geometry', function() {
 
   describe('createMatrix', function() {
 
-    it('should create matrix', function() {
+    it('should create matrix (object notation)', function() {
 
       // when
       var m = createMatrix({ e: 10, f: 20 });
@@ -56,6 +56,23 @@ describe('geometry', function() {
       // then
       expect(m instanceof SVGMatrix).to.be.true;
 
+      expect(m.e).to.eql(10);
+      expect(m.f).to.eql(20);
+    });
+
+
+    it('should create matrix (a..f)', function() {
+
+      // when
+      var m = createMatrix(0, 0, 0, 0, 10, 20);
+
+      // then
+      expect(m instanceof SVGMatrix).to.be.true;
+
+      expect(m.a).to.eql(0);
+      expect(m.b).to.eql(0);
+      expect(m.c).to.eql(0);
+      expect(m.d).to.eql(0);
       expect(m.e).to.eql(10);
       expect(m.f).to.eql(20);
     });
