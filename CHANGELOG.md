@@ -6,6 +6,10 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.2.1
+
+* `FIX`: work around IE / MS Edge transform issue ([`980e9d6f`](https://github.com/bpmn-io/tiny-svg/commit/980e9d6f69a79ae500c6a4172d046b2420e4ca25))
+
 ## 2.2.0
 
 * `FEAT`: add ability to `create` any SVG element via markup
