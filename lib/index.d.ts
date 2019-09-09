@@ -152,15 +152,15 @@ export function innerSVG(element: Element, svg: string): typeof element;
 export function innerSVG(element: Element): string;
 export function innerSVG(element: Element, svg?: string): typeof element | string;
 
-export function select(node: Node, )
+export function select(node: Node, selector: string): Node | null;
 
-export function select<K extends keyof HTMLElementTagNameMap>(selectors: K): HTMLElementTagNameMap[K] | null;
-export function select<K extends keyof SVGElementTagNameMap>(selectors: K): SVGElementTagNameMap[K] | null;
-export function select<E extends Element = Element>(selectors: string): E | null;
+export function select<K extends keyof HTMLElementTagNameMap>(node: K, selector: string): HTMLElementTagNameMap[K] | null;
+export function select<K extends keyof SVGElementTagNameMap>(node: K, selector: string): SVGElementTagNameMap[K] | null;
+export function select<E extends Element = Element>(node: E, selector: string): E | null;
 
-export function selectAll<K extends keyof HTMLElementTagNameMap>(selectors: K): HTMLElementTagNameMap[K][];
-export function selectAll<K extends keyof SVGElementTagNameMap>(selectors: K): SVGElementTagNameMap[K][];
-export function selectAll<E extends Element = Element>(selectors: string): E[];
+export function selectAll<K extends keyof HTMLElementTagNameMap>(node: K, selector: string): HTMLElementTagNameMap[K][];
+export function selectAll<K extends keyof SVGElementTagNameMap>(node: K, selector: string): SVGElementTagNameMap[K][];
+export function selectAll<E extends Element = Element>(node: E, selector: string): E[];
 
 export function remove(el: Node): void;
 
