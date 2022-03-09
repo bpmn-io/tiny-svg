@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - node
-
-addons:
-  firefox: "latest-esr"
-
-script:
-  - TEST_BROWSERS=ChromeHeadless,Firefox,PhantomJS xvfb-run npm run all
