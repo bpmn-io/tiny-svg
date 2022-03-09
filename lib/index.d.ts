@@ -18,6 +18,26 @@ export function append(element: Element, node: SVGElement): typeof element;
  */
 export function appendTo(element: Element, target: SVGElement): typeof element;
 
+/**
+ * Prepend a node to an element
+ *
+ * @param  {SVGElement} element
+ * @param  {SVGElement} node
+ *
+ * @return {SVGElement} the element
+ */
+export function prepend(element: Element, node: SVGElement): typeof element;
+
+/**
+ * Prepend a node to a target element and return the prepended node.
+ *
+ * @param  {SVGElement} element
+ * @param  {SVGElement} node
+ *
+ * @return {SVGElement} the prepended node
+ */
+export function prependTo(element: Element, target: SVGElement): typeof element;
+
 export interface KeyValue {
   [key: string]: any;
 }
@@ -55,11 +75,11 @@ export class ClassList<T extends Element> {
 }
 
 /**
-* Removes all children from the given element
-*
-* @param  {DOMElement} element
-* @return {DOMElement} the element (for chaining)
-*/
+ * Removes all children from the given element
+ *
+ * @param  {DOMElement} element
+ * @return {DOMElement} the element (for chaining)
+ */
 export function clear<T extends Element>(element: T): T;
 
 export function clone<T extends Node>(element: T): T;
