@@ -6,6 +6,10 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.2.4
+
+* `FIX`: lazily create utility elements ([#10](https://github.com/bpmn-io/tiny-svg/issues/10))
+
 ## 2.2.3
 
 * `CHORE`: add type definitions for prepend and prependTo
