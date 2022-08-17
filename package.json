@@ -1,6 +1,6 @@
 {
   "name": "tiny-svg",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "A minimal toolbelt for builing fast SVG-based applications",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
