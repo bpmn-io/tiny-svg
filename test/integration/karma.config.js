@@ -1,3 +1,5 @@
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
 module.exports = function(karma) {
   karma.set({
 
@@ -12,7 +14,7 @@ module.exports = function(karma) {
 
     reporters: [ 'progress' ],
 
-    browsers: [ 'PhantomJS' ],
+    browsers: [ 'ChromeHeadless' ],
 
     singleRun: true,
     autoWatch: false

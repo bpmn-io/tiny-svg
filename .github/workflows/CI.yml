@@ -15,5 +15,5 @@ jobs:
       run: npm ci
     - name: Build
       env:
-        TEST_BROWSERS: Firefox,PhantomJS,ChromeHeadless
+        TEST_BROWSERS: Firefox,ChromeHeadless
       run: xvfb-run npm run all

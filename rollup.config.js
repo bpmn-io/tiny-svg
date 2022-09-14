@@ -1,10 +1,11 @@
-import { uglify } from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
 
 import pkg from './package.json';
 
 const umdDist = 'dist/tiny-svg.js';
 
 export default [
+
   // browser-friendly UMD build
   {
     input: 'lib/index.js',
@@ -22,7 +23,7 @@ export default [
       format: 'umd'
     },
     plugins: [
-      uglify()
+      terser()
     ]
   },
   {
