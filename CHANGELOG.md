@@ -6,6 +6,16 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.0.0
+
+* `FEAT`: change library target to `ES2018`
+* `FEAT`: drop polyfills for browser not supporting `ES2018`
+
+### Breaking Changes
+
+* Target syntax is `ES2018`. Transpile the code base to target `< ES2018`.
+* Polyfills for browsers not supporting `ES2018` are dropped (e.g. Element.classList).
+
 ## 2.2.4
 
 * `FIX`: lazily create utility elements ([#10](https://github.com/bpmn-io/tiny-svg/issues/10))
