@@ -6,6 +6,10 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.0.1
+
+* `FIX`: correct `create` type definition ([#13](https://github.com/bpmn-io/tiny-svg/pull/13))
+
 ## 3.0.0
 
 * `FEAT`: change library target to `ES2018`
