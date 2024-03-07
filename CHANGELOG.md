@@ -6,6 +6,16 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 4.0.0
+
+* `CHORE`: turn into ES module
+* `CHORE`: require Node >= 16
+* `CHORE`: drop UMD distribution
+
+### Breaking Change
+
+* This library is now an ES only module, and can consumed as such in modern JavaScript environments.
+
 ## 3.0.1
 
 * `FIX`: correct `create` type definition ([#13](https://github.com/bpmn-io/tiny-svg/pull/13))
