@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 // configures browsers to run test against
 // any of [ 'ChromeHeadless', 'Chrome', 'Firefox', 'IE', 'PhantomJS' ]
 process.env.CHROME_BIN = require('puppeteer').executablePath();
