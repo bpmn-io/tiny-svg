@@ -1,11 +1,12 @@
 import pkg from './package.json';
 
+const pkgExport = pkg.exports['.'];
+
 export default [
   {
     input: 'lib/index.js',
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' }
+      { file: pkgExport.import, format: 'es', sourcemap: true }
     ]
   }
 ];

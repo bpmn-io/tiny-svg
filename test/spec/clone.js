@@ -8,12 +8,12 @@ import {
   transform,
   attr as _attr,
   select
-} from '../../lib';
+} from 'tiny-svg';
 
 import {
   createContainer,
   normalizeAttr
-} from '../helper';
+} from '../helper.js';
 
 
 describe('clone', function() {

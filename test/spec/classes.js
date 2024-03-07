@@ -1,7 +1,7 @@
 import {
   create,
   classes
-} from '../../lib';
+} from 'tiny-svg';
 
 
 function classList(el) {

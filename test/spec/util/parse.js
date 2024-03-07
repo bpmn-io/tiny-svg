@@ -1,8 +1,8 @@
 import {
   innerSVG
-} from '../../../lib';
+} from 'tiny-svg';
 
-import parse from '../../../lib/util/parse';
+import parse from '../../../lib/util/parse.js';
 
 
 describe('parse', function() {

@@ -1,7 +1,7 @@
 import {
   create,
   prependTo
-} from '../../lib';
+} from 'tiny-svg';
 
 
 describe('prependTo', function() {
