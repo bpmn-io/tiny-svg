@@ -2,11 +2,11 @@ import {
   create,
   appendTo,
   remove
-} from '../../lib';
+} from 'tiny-svg';
 
 import {
   createContainer
-} from '../helper';
+} from '../helper.js';
 
 
 describe('remove', function() {

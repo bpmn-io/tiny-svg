@@ -2,11 +2,11 @@ import {
   create,
   select,
   attr
-} from '../../lib';
+} from 'tiny-svg';
 
 import {
   normalizeAttr
-} from '../helper';
+} from '../helper.js';
 
 
 describe('attr', function() {

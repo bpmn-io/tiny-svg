@@ -2,7 +2,7 @@ import {
   create,
   selectAll,
   select
-} from '../../lib';
+} from 'tiny-svg';
 
 
 describe('query', function() {

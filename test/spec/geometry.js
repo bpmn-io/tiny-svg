@@ -2,7 +2,7 @@ import {
   createMatrix,
   createPoint,
   createTransform
-} from '../../lib';
+} from 'tiny-svg';
 
 
 describe('geometry', function() {

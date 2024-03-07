@@ -1,11 +1,11 @@
 import {
   create,
   append
-} from '../../lib';
+} from 'tiny-svg';
 
 import {
   createContainer
-} from '../helper';
+} from '../helper.js';
 
 
 describe('append', function() {

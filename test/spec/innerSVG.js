@@ -3,11 +3,11 @@ import {
   appendTo,
   innerSVG,
   attr
-} from '../../lib';
+} from 'tiny-svg';
 
 import {
   createContainer
-} from '../helper';
+} from '../helper.js';
 
 
 describe('inner-svg', function() {
