@@ -1,6 +1,6 @@
 {
   "name": "tiny-svg",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "A minimal toolbelt for builing fast SVG-based applications",
   "type": "module",
   "scripts": {
