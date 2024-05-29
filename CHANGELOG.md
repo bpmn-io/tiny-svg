@@ -6,6 +6,11 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 4.1.0
+
+* `FEAT`: use optimized `clear`
+* `FEAT`: trim whitespace around `create`
+
 ## 4.0.0
 
 * `CHORE`: turn into ES module
