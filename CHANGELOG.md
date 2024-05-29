@@ -10,6 +10,10 @@ ___Note:__ Yet to be released changes appear here._
 
 * `CHORE`: make `clear` work standalone
 
+## 3.1.2
+
+* `CHORE`: standalone `clear` implementation
+
 ## 4.1.1
 
 * `CHORE`: revert to basic `clear`
