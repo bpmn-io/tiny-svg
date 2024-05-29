@@ -6,6 +6,10 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.1.1
+
+* `CHORE`: rever to basic `clear`
+
 ## 4.1.0
 
 * `FEAT`: use optimized `clear`
