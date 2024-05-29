@@ -46,8 +46,31 @@ describe('create', function() {
 
     // then
     expect(svg.nodeName).to.eql('svg');
-    expect(svg.childNodes.length).to.eql(1);
-    expect(svg.childNodes[0].nodeName).to.eql('g');
+    expect(svg.children.length).to.eql(1);
+    expect(svg.children[0].nodeName).to.eql('g');
+  });
+
+
+  it('should create <svg> from multi-line markup (trimming whitespace)', function() {
+
+    // given
+    var container = createContainer();
+
+    // when
+    var svg = create(`
+      <svg>
+        <g>
+          <circle cx="10" cy="10" r="2"></circle>
+        </g>
+      </svg>
+    `);
+
+    append(container, svg);
+
+    // then
+    expect(svg.nodeName).to.eql('svg');
+    expect(svg.children.length).to.eql(1);
+    expect(svg.children[0].nodeName).to.eql('g');
   });
 
 
