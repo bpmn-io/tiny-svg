@@ -11,6 +11,11 @@ ___Note:__ Yet to be released changes appear here._
 * `FEAT`: use optimized `clear`
 * `FEAT`: trim whitespace around `create`
 
+## 3.1.0
+
+* `FEAT`: use optimized `clear`
+* `FEAT`: trim whitespace around `create`
+
 ## 4.0.0
 
 * `CHORE`: turn into ES module
