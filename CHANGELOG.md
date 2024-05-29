@@ -6,6 +6,11 @@ All notable changes to [tiny-svg](https://github.com/bpmn-io/tiny-svg) are docum
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.1.0
+
+* `FEAT`: use optimized `clear`
+* `FEAT`: trim whitespace around `create`
+
 ## 3.0.1
 
 * `FIX`: correct `create` type definition ([#13](https://github.com/bpmn-io/tiny-svg/pull/13))
