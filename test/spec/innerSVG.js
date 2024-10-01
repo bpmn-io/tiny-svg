@@ -225,7 +225,7 @@ describe('inner-svg', function() {
       var container = createContainer();
       var element = appendTo(create('svg'), container);
 
-      var text = '<g><rect data-foo="1 &lt; 2"/></g>';
+      var text = '<g><rect data-foo="1 &lt;&gt; 2"/></g>';
 
       innerSVG(element, text);
 
