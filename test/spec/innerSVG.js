@@ -218,6 +218,41 @@ describe('inner-svg', function() {
       expect(svg).to.eql(text);
     });
 
+
+    it('should escape <> in attributes', function() {
+
+      // given
+      var container = createContainer();
+      var element = appendTo(create('svg'), container);
+
+      var text = '<g><rect data-foo="1 &lt;&gt; 2"/></g>';
+
+      innerSVG(element, text);
+
+      // when
+      var svg = innerSVG(element);
+
+      // then
+      expect(svg).to.eql(text);
+    });
+
+
+    it('should escape & in attributes', function() {
+
+      // given
+      var container = createContainer();
+      var element = appendTo(create('svg'), container);
+
+      var text = '<g><rect data-foo="1 &amp; 2"/></g>';
+
+      innerSVG(element, text);
+
+      // when
+      var svg = innerSVG(element);
+
+      // then
+      expect(svg).to.eql(text);
+    });
   });
 
 });
