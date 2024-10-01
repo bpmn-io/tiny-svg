@@ -10,6 +10,10 @@ ___Note:__ Yet to be released changes appear here._
 
 * `FIX`: escape entities in attributes ([#16](https://github.com/bpmn-io/tiny-svg/issues/16))
 
+## 3.1.3
+
+* `FIX`: escape entities in attributes ([#16](https://github.com/bpmn-io/tiny-svg/issues/16))
+
 ## 4.1.2
 
 * `CHORE`: make `clear` work standalone
