@@ -93,7 +93,7 @@ describe('attr', function() {
   });
 
 
-  it('should set attribute', function() {
+  it('should set attribute camel cased', function() {
 
     // given
     var svg = create('svg');
