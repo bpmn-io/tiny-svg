@@ -29,7 +29,7 @@
     "geometry"
   ],
   "engines": {
-    "node": ">= 16"
+    "node": ">= 20"
   },
   "author": {
     "name": "Nico Rehwaldt",
