@@ -4,6 +4,8 @@ import {
   createTransform
 } from 'tiny-svg';
 
+import { expect } from 'chai';
+
 
 describe('geometry', function() {
 

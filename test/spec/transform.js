@@ -10,6 +10,8 @@ import {
   normalizeAttr
 } from '../helper.js';
 
+import { expect } from 'chai';
+
 
 describe('transform', function() {
 

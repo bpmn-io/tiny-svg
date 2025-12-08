@@ -8,6 +8,8 @@ import {
   normalizeAttr
 } from '../helper.js';
 
+import { expect } from 'chai';
+
 
 describe('attr', function() {
 
