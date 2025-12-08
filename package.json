@@ -12,14 +12,13 @@
     "prepare": "run-s bundle",
     "test": "karma start karma.conf.cjs"
   },
+  "main": "./dist/index.js",
+  "source": "./lib/index.js",
   "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    },
+    ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
-  "types": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/bpmn-io/tiny-svg"
