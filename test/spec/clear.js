@@ -4,6 +4,8 @@ import {
   select
 } from 'tiny-svg';
 
+import { expect } from 'chai';
+
 
 describe('clear', function() {
 

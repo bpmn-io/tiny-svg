@@ -4,6 +4,8 @@ import {
 
 import parse from '../../../lib/util/parse.js';
 
+import { expect } from 'chai';
+
 
 describe('parse', function() {
 

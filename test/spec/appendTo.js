@@ -7,6 +7,8 @@ import {
   createContainer
 } from '../helper.js';
 
+import { expect } from 'chai';
+
 
 describe('appendTo', function() {
 

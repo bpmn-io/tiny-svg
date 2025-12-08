@@ -3,6 +3,8 @@ import {
   classes
 } from 'tiny-svg';
 
+import { expect } from 'chai';
+
 
 function classList(el) {
   return el.className.baseVal.split(' ');

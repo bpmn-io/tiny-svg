@@ -3,6 +3,8 @@ import {
   prependTo
 } from 'tiny-svg';
 
+import { expect } from 'chai';
+
 
 describe('prependTo', function() {
 
